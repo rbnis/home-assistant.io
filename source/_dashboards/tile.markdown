@@ -252,3 +252,29 @@ commands:
   description: List of commands to show on the card. The list can contain `start_pause`, `stop`, `clean_spot`, `locate` and `return_home`.
   type: list
 {% endconfiguration %}
+
+### Input Select options
+
+Widget that displays some or all available options for an [input select](/integrations/input_select).
+
+<p class='img'>
+  <img src='/images/dashboards/tile-features/input_select-options.png' alt='Screenshot of the tile card with input select options feature'>
+  Screenshot of the tile card with input select options feature
+</p>
+
+```yaml
+features:
+  - type: input_select-options
+    options: []
+```
+
+{% configuration %}
+type:
+  required: true
+  description: "`input_select-options`"
+  type: string
+commands:
+  required: false
+  description: List of options to show on the card. The list can contain any option configured for the input select.
+  type: list
+{% endconfiguration %}
